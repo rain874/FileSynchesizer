@@ -25,7 +25,7 @@ sync1_conf=$PWD/sync1.conf
 if [ -f "$sync1_conf" ]; then
     echo "WARNUNG! SOLLTEN SIE NIX EINGEBN WERDEN DIE ZULETZT GENUTZEN DATEIN GENUTZT!"
 else 
-	echo "Bitte Geben Sie die erste Datei und Pfad an der Synconiert werden soll"
+	echo "Bitte Geben Sie die erste Datei und Pfad an der Synchronisiert werden soll"
     #read sync1
 fi
 
@@ -33,13 +33,13 @@ sync1_conf=$PWD/sync2.conf
 if [ -f "$sync2_conf" ]; then
     echo "WARNUNG! SOLLTEN SIE NIX EINGEBN WERDEN DIE ZULETZT GENUTZEN DATEIN GENUTZT!"
 else 
-	echo "Bitte Geben Sie die zweite Datei und Pfad an der Synconiert werden soll"
+	echo "Bitte Geben Sie die zweite Datei und Pfad an der Synchronisiert werden soll"
     #read $sync2
 fi
 
-#echo "Bitte Geben Sie die erste Datei und Pfad an der Synconiert werden soll"
+#echo "Bitte Geben Sie die erste Datei und Pfad an der Synchronisiert werden soll"
 #read sync1
-#echo "Bitte Geben Sie die zweite Datei und Pfad an der Synconiert werden soll"
+#echo "Bitte Geben Sie die zweite Datei und Pfad an der Synchronisiert werden soll"
 #read sync2
 
 sync1="/media/unixben/San32/Datenbank.kdbx"
@@ -51,10 +51,10 @@ sync2="/mnt/freeNAS/Datenbank.kdbx"
 md5check2=$(set -- $(md5sum $sync2); echo $1)
 
 if [ "$md5check1" = "$md5check2" ]; then
-    echo "Die files sind Syncon"
+    echo "Die files sind Synchron"
 else
-    echo "Die files sind nicht Syncor"
-    echo "Sollen Sie Synconiert werden? (j/n)"
+    echo "Die files sind nicht Synchron"
+    echo "Sollen Sie Synchronisiert werden? (j/n)"
     read  response2
 fi
 
